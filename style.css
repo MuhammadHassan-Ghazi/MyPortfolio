@@ -69,13 +69,24 @@ body {
     animation: fadeIn 1.5s ease-out, slideUp 1s ease-out;
 }
 
+/* Circle Image */
 .hero img {
-    border-radius: 50%;
     width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes it a circle */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Uncomment below for rectangle image */
+/*
+.hero img {
+    width: 250px;
     height: 150px;
     object-fit: cover;
     margin-bottom: 20px;
 }
+*/
 
 .hero h1 {
     font-size: 3rem;
@@ -122,7 +133,6 @@ body {
 .technologies {
     padding: 50px 0;
     background-color: #E0E8FF;
-    /* text-align: center; */
     animation: fadeIn 1.5s ease-out, slideRight 1s ease-out;
 }
 
@@ -149,6 +159,11 @@ body {
 
 .technologies ul li {
     font-size: 1.2rem;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Portfolio Section */
@@ -237,11 +252,6 @@ footer p {
     font-size: 1.1rem;
 }
 
-.skills{
-    display: flex;
-    justify-content: space-between;
-}
-
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     .hero h1 {
@@ -267,6 +277,33 @@ footer p {
     .contact h2 {
         font-size: 2rem;
     }
+
+    .technologies .skills {
+        flex-direction: column;
+    }
+
+    .technologies .category h3 {
+        font-size: 1.2rem;
+    }
+
+    .technologies ul {
+        margin-left: 20px;
+    }
+
+    .hero img {
+        width: 50%; /* Adjusted for mobile responsiveness */
+        max-width: 120px;
+        height: auto;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -280,9 +317,22 @@ footer p {
 
     .projects {
         grid-template-columns: 1fr;
+        padding: 10px;
     }
 
     .contact h2 {
         font-size: 1.8rem;
+    }
+
+    .contact-links li {
+        margin: 15px 0;
+    }
+
+    .contact-links a {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 20px 0;
     }
 }
